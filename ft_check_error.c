@@ -64,9 +64,9 @@ static int	ft_check_nb_connection(char *s)
 
 extern int	ft_check_error(char *s)
 {
-	if (ft_check_place(s) == FALSE)
+	if (!ft_check_place(s))
 		return (FALSE);
-	if (ft_check_nb_connection(s) == FALSE)
+	if (!ft_check_nb_connection(s))
 		return (FALSE);
 	return (TRUE);
 }

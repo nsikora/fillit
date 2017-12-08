@@ -126,7 +126,7 @@ static char			internal_ft_read(const char *in_filename,
 	while ((read_ret = read(file_descriptor, read_buf, READ_COUNT)) > 0)
 	{
 		read_buf[read_ret] = '\0';
-		if (ft_check_error(read_buf) == FALSE)
+		if (!ft_check_error(read_buf))
 			return (FALSE);
 		ft_memcpy(file_content + file_content_size, read_buf,
 			(size_t)read_ret);
