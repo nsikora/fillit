@@ -6,7 +6,7 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 12:06:24 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/08 13:21:49 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/08 15:17:54 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ static char			internal_stock_file_content(const char *in_file_content,
 
 	if (!(*out_tetriminos_lst = malloc(sizeof(t_tetris))))
 		return (FALSE);
-	ft_putnbr(in_tetriminos_id);
 	if (in_tetriminos_id > TETRIMINOS_MAX_PER_FILE)
 		return (FALSE);
 	(*out_tetriminos_lst)->number = in_tetriminos_id;

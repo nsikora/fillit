@@ -6,7 +6,7 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:37:15 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/08 11:27:46 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/08 15:56:16 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ static int			check_place(t_tetris *lst, t_map *map, int x, int y)
 		i++;
 		j = 0;
 	}
-	lst = lst->next;
 	return (0);
 }
 
@@ -87,21 +86,16 @@ static int			backtrack(t_tetris *lst, t_map *map, unsigned int len_map)
 
 	x = 0;
 	y = 0;
-	ft_putendl("backtrack");
+	if (lst == NULL)
+		return (1);
 	while (x <= (len_map - lst->height))
 	{
 		while (y <= (len_map - lst->width))
 		{
 			if (check_place(lst, map, x, y) == 0)
 			{
-				ft_putendl("sortie");
-				lst = lst->next;
-				if (lst == NULL)
-				{
-					ft_putendl("next est nul");
+				if (backtrack(lst->next, map, len_map))
 					return (1);
-				}
-				backtrack(lst->next, map, len_map);
 			}
 			clean_place(lst, map, x, y);
 			y++;
