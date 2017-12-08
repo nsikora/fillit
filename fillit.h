@@ -18,8 +18,8 @@
 # include <fcntl.h>
 # include <unistd.h>
 
-# define TRUE 0
-# define FALSE 1
+# define TRUE 1
+# define FALSE 0
 # define TETRIMINOS_MAX_PER_FILE (unsigned int)26
 # define TETRIMINOS_NB_CHAR (unsigned int)21
 # define MALLOC_SIZE (unsigned int)(TETRIMINOS_NB_CHAR*TETRIMINOS_MAX_PER_FILE)
