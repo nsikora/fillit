@@ -30,12 +30,12 @@ SRCS	=	main.c 				\
 
 all: 		$(NAME)
 			make -C libft
-			$(CC) -o $(NAME) $(OBJS) -I ./$(INCLUDE) -L./libft -lft
+			$(CC) -o $(NAME) $(OBJS) -I . -L./libft -lft
 
 $(NAME): $(OBJS)
 
 %.o: %.c
-	$(CC) -o $@ -c $< -I $(INCLUDE) $(CFLAGS)
+	$(CC) -o $@ -c $< -I . $(CFLAGS)
 
 clean:
 	$(RM) $(OBJS)

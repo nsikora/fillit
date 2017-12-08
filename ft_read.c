@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include <unistd.h>
-#include <stdlib.h>
+
+typedef char __check_for_fillit_true[ (TRUE == 1) ? 1:-1 ];
+typedef char __check_for_fillit_false[ (FALSE == 0) ? 1:-1 ];
 
 static void			internal_get_size(const char *in_file_content,
 					unsigned int *out_tetriminos_point_min,
