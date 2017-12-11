@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 16:20:02 by cpieri            #+#    #+#             */
-/*   Updated: 2017/12/08 13:17:25 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 10:56:52 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ typedef	struct			s_map
 	unsigned int		y;
 }						t_map;
 
-void					ft_print_tetri(t_tetris *lst);
 void					ft_solve_to_map(t_tetris *lst);
 t_tetris				*tetris_lstnew(char *s, unsigned int number);
 char					ft_read(const char *in_filename,

@@ -6,7 +6,7 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:37:15 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/08 15:56:16 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 10:45:56 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,16 @@ static void			clean_place(t_tetris *lst, t_map *map,
 
 static int			backtrack(t_tetris *lst, t_map *map, unsigned int len_map)
 {
-	unsigned int	x;
-	unsigned int	y;
+	int	x;
+	int	y;
 
 	x = 0;
 	y = 0;
 	if (lst == NULL)
 		return (1);
-	while (x <= (len_map - lst->height))
+	while (x <= ((int)len_map - (int)lst->height))
 	{
-		while (y <= (len_map - lst->width))
+		while (y <= ((int)len_map - (int)lst->width))
 		{
 			if (check_place(lst, map, x, y) == 0)
 			{
@@ -108,14 +108,18 @@ static int			backtrack(t_tetris *lst, t_map *map, unsigned int len_map)
 
 void				ft_solve_to_map(t_tetris *lst)
 {
+	t_tetris		*cpy;
 	t_map			*map;
 	unsigned int	len_map;
 	unsigned int	x;
 
 	map = NULL;
 	x = 0;
-	ft_print_tetri(lst);
+	cpy = lst;
+	while (lst->next != NULL)
+		lst = lst->next;
 	len_map = ft_sqrt(lst->number * 4);
+	lst = cpy;
 	while (len_map < lst->height || len_map < lst->width)
 		len_map++;
 	map = init_map(map, len_map);

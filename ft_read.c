@@ -6,14 +6,11 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 12:06:24 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/08 15:17:54 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 10:51:03 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
-typedef char __check_for_fillit_true[ (TRUE == 1) ? 1:-1 ];
-typedef char __check_for_fillit_false[ (FALSE == 0) ? 1:-1 ];
 
 static void			internal_get_size(const char *in_file_content,
 					unsigned int *out_tetriminos_point_min,

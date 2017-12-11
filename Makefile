@@ -6,7 +6,7 @@
 #    By: nsikora <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/23 16:56:40 by nsikora           #+#    #+#              #
-#    Updated: 2017/12/07 16:01:52 by nsikora          ###   ########.fr        #
+#    Updated: 2017/12/11 10:56:36 by nsikora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,6 @@ INCLUDE	=	fillit.h
 SRCS	=	main.c 				\
 			ft_read.c			\
 			ft_algo.c			\
-			ft_print_tetri.c	\
 			ft_check_error.c
 
 all: 		$(NAME)
