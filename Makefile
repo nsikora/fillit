@@ -6,7 +6,7 @@
 #    By: nsikora <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/23 16:56:40 by nsikora           #+#    #+#              #
-#    Updated: 2017/12/11 10:56:36 by nsikora          ###   ########.fr        #
+#    Updated: 2017/12/11 13:01:41 by nsikora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,12 @@ OBJS	=	$(SRCS:.c=.o)
 
 RM		=	rm -f
 
-INCLUDE	=	fillit.h
+INCLUDE	=	include/fillit.h
 
-SRCS	=	main.c 				\
-			ft_read.c			\
-			ft_algo.c			\
-			ft_check_error.c
+SRCS	=	src/main.c 				\
+			src/ft_read.c			\
+			src/ft_algo.c			\
+			src/ft_check_error.c
 
 all: 		$(NAME)
 			make -C libft

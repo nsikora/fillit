@@ -6,11 +6,11 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 15:54:51 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/08 10:39:53 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 13:02:15 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "include/fillit.h"
 
 static int	ft_check_place(char *s)
 {

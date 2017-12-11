@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 16:14:39 by cpieri            #+#    #+#             */
-/*   Updated: 2017/12/08 10:22:09 by nsikora          ###   ########.fr       */
+/*   Created: 2017/11/21 16:14:39 by nsikora           #+#    #+#             */
+/*   Updated: 2017/12/11 13:02:38 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "include/fillit.h"
 
 int		main(int ac, char **av)
 {

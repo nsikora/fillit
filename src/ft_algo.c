@@ -6,11 +6,11 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:37:15 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/11 10:45:56 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 13:02:03 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "include/fillit.h"
 
 static t_map		*init_map(t_map *map, unsigned int len_map)
 {

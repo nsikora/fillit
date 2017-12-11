@@ -6,11 +6,11 @@
 /*   By: nsikora <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 12:06:24 by nsikora           #+#    #+#             */
-/*   Updated: 2017/12/11 10:51:03 by nsikora          ###   ########.fr       */
+/*   Updated: 2017/12/11 13:02:26 by nsikora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "include/fillit.h"
 
 static void			internal_get_size(const char *in_file_content,
 					unsigned int *out_tetriminos_point_min,
@@ -113,9 +113,8 @@ static char			internal_ft_read(const char *in_filename,
 	char			read_buf[READ_COUNT + 1];
 	size_t			read_ret;
 
-	if ((file_descriptor = open(in_filename, O_RDONLY)) == -1)
-		return (FALSE);
-	if (!(file_content = malloc(MALLOC_SIZE)))
+	if ((file_descriptor = open(in_filename, O_RDONLY)) == -1 ||
+		!(file_content = malloc(MALLOC_SIZE)))
 		return (FALSE);
 	ft_memset(file_content, '\0', READ_COUNT + 1);
 	file_content_size = 0;
@@ -131,6 +130,7 @@ static char			internal_ft_read(const char *in_filename,
 	if (read_buf[20] == '\n' || file_content_size == 0
 		|| !internal_stock_file_content(file_content, 1, out_tetriminos_lst))
 		return (FALSE);
+	close(file_descriptor);
 	return (TRUE);
 }
 
